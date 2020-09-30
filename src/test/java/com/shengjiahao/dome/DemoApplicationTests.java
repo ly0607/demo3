@@ -9,6 +9,7 @@ class DemoApplicationTests {
     @Test
     void contextLoads() {
         System.out.println("盛佳豪测试");
+        System.out.println("lc测试");
     }
 
 }
