@@ -1,0 +1,9 @@
+#邹健开始
+spring:
+  datasource:
+    url:  jdbc:mysql://127.0.0.1:3306/constructProjectManage_Init?useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+#    邹健结束
