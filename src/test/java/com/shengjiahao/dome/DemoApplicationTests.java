@@ -20,4 +20,9 @@ class DemoApplicationTests {
         System.out.println("王莲杰测试");
     }
 
+    @Test
+    void test01(){
+        System.out.println("2020-10-03  09:13");
+
+    }
 }
