@@ -34,4 +34,8 @@ class DemoApplicationTests {
     void context2(){
         System.out.println("ly");
     }
+    @Test
+    void context3(){
+        System.out.println("ly");
+    }
 }
