@@ -25,4 +25,9 @@ class DemoApplicationTests {
         System.out.println("2020-10-03  09:13");
 
     }
+
+    @Test
+    void context(){
+        System.out.println("ly");
+    }
 }
