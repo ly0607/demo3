@@ -38,16 +38,6 @@ class DemoApplicationTests {
 
     }
 
-    @Test
-    void context(){
-        System.out.println("ly");
-    }
-    @Test
-    void context2(){
-        System.out.println("lycddd");
-    }
-    @Test
-    void context3(){
-        System.out.println("ly2222222222222");
-    }
+
+
 }

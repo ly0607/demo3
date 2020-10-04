@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="lib-master/theme-chalk/index.css"/>
+    <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib-master/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="axios-master/dist/axios.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        #modal{
+            text-align: right;
+            background-color: #dfecd5;
+        }
+        #modal2{
+            text-align: left;
+            background-color: white;
+        }
+        table{
+            border-collapse:collapse;
+            border: 1px solid red;
+
+        }
+        td{
+            border-collapse:collapse;
+            border: 1px solid #9fa39a;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2 align="center" style="color:#5e665b">投标项目信息登记</h2>
+        <el-form ref="form" :model="form"  label-width="10px">
+        <table width="1200px" border="1px" cellspacing="0" cellpadding="7" align="center">
+            <tr>
+                <td id="modal">项目编号：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">项目名称：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">项目简介：</td>
+                <td colspan="3" id="modal2">
+                    <el-input type="textarea" v-model="form.name" ></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">项目地址：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">录入人：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">日期：</td>
+                <td id="modal2">
+                    <el-input size="mini" type="date"  v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">项目性质：</td>
+                <td id="modal2">
+                    <el-select v-model="form.region" size="mini" style="width: 60%;">
+                        <el-option label="区域一" value="shanghai"></el-option>
+                        <el-option label="区域二" value="beijing"></el-option>
+                    </el-select>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">项目类型：</td>
+                <td id="modal2">
+                    <el-select v-model="form.region" size="mini" style="width: 60%;">
+                        <el-option label="区域一" value="shanghai"></el-option>
+                        <el-option label="区域二" value="beijing"></el-option>
+                    </el-select>
+                </td>
+                <td id="modal">投标负责人：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">预计投标日期：</td>
+                <td id="modal2">
+                    <el-input size="mini" type="date"  v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">预计投标费：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">预计合同金额：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">建设单位：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">合同金额：</td>
+                <td colspan="3" id="modal2">
+                    <el-input size="mini" v-model="form.name" ></el-input>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td id="modal" >联系人：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">联系电话：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal" >设计单位：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+                <td id="modal">监理单位：</td>
+                <td id="modal2">
+                    <el-input size="mini" v-model="form.name" style="width: 60%;"></el-input>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">备注：</td>
+                <td colspan="3" id="modal2">
+                    <el-input type="textarea" v-model="form.desc" ></el-input>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td id="modal">上传文件：</td>
+                <td id="modal2" colspan="3">
+                    11
+                </td>
+            </tr>
+
+            <tr>
+                <td id="modal">审批状态：</td>
+                <td id="modal2" colspan="3">
+                    <input type="radio" name="state" value="完成">完成</input>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="state" value="进行中">进行中</input>
+                </td>
+            </tr>
+
+            <tr >
+                <td colspan="4" id="modal2" style="height: 80px; text-align: center;" >
+                    <input type="button" value="保  存" style="height:40px;width:80px"></input>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="信息查询" style="height:40px;width:90px"></input>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            form: {
+                name: '',
+                region: '',
+                date1: '',
+                date2: '',
+                delivery: false,
+                type: [],
+                resource: '',
+                desc: ''
+            }
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>
